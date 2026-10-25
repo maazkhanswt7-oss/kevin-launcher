@@ -23,15 +23,17 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # This step gives permission to run the build file
+      # Add working-directory: android here so it finds gradlew inside the folder
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        working-directory: android
 
       - name: Build with Gradle
         run: ./gradlew assembleDebug --no-daemon
+        working-directory: android
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
