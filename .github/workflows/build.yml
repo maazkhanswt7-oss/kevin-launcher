@@ -23,11 +23,13 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      # Grant permission in the root directory
+      # This command generates the missing gradlew file automatically!
+      - name: Generate Gradle Wrapper
+        run: gradle wrapper
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # Run gradlew from the root directory (no working-directory needed)
       - name: Build with Gradle
         run: ./gradlew assembleDebug --no-daemon
 
