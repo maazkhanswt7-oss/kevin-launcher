@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.slay.tvlauncher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.slay.tvlauncher"
+        minSdk 24
+        targetSdk 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release { minifyEnabled false }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+// No dependencies on purpose: smallest APK, least RAM on a 512 MB TV.

@@ -1,0 +1,59 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+
+    <!-- rounded night-sky background -->
+    <path android:pathData="M22,0 H86 A22,22 0 0 1 108,22 V86 A22,22 0 0 1 86,108 H22 A22,22 0 0 1 0,86 V22 A22,22 0 0 1 22,0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="108" android:endY="108">
+                <item android:offset="0" android:color="#FF2E1740"/>
+                <item android:offset="1" android:color="#FF0B0D12"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- warm glow behind the K -->
+    <path android:pathData="M54,54 m-52,0 a52,52 0 1,0 104,0 a52,52 0 1,0 -104,0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="54" android:centerY="54" android:gradientRadius="52">
+                <item android:offset="0" android:color="#66FFA45C"/>
+                <item android:offset="1" android:color="#00FFA45C"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- faint full orbit -->
+    <path android:pathData="M54,54 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"
+        android:strokeWidth="1.5" android:strokeColor="#33FFE2C4"/>
+
+    <!-- bright orbit arc -->
+    <path android:pathData="M54,14 A40,40 0 0,1 93.4,60.9"
+        android:strokeWidth="3.5" android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="54" android:startY="14" android:endX="94" android:endY="61">
+                <item android:offset="0" android:color="#FFFFC48A"/>
+                <item android:offset="1" android:color="#FFE0707A"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- orbiting dot -->
+    <path android:fillColor="#FFFFC48A"
+        android:pathData="M34,88.6 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0"/>
+
+    <!-- sparkle -->
+    <path android:fillColor="#FFFFF3E6"
+        android:pathData="M84,14 Q85.5,22.5 94,24 Q85.5,25.5 84,34 Q82.5,25.5 74,24 Q82.5,22.5 84,14 Z"/>
+
+    <!-- the K -->
+    <path android:pathData="M42,35 L42,75 M73,35 L43,55 L74,75"
+        android:strokeWidth="10" android:strokeLineCap="round" android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient android:type="linear" android:startX="36" android:startY="35" android:endX="78" android:endY="75">
+                <item android:offset="0" android:color="#FFFFF3E6"/>
+                <item android:offset="1" android:color="#FFFFC48A"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
